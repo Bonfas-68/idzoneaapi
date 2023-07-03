@@ -64,7 +64,7 @@ export const getIdeas = async (req, res) => {
     const connect = await mssql.connect(config.sql);
     // const result = await connect.request().query("SELECT * FROM ideas");
     const result = await connect.request().query(
-      `SELECT u.user_id,u.user_image, u.username, u.user_email, i.idea_id, i.idea_img, i.idea_title, i.idea_text 
+      `SELECT u.user_id,u.user_domain,u.user_image, u.username, u.user_email, i.idea_id, i.idea_img, i.idea_title, i.idea_text 
       FROM ideas i 
       Join users u ON i.user_id = u.user_id 
       ORDER BY i.idea_id DESC`
