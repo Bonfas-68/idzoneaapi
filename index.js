@@ -16,7 +16,7 @@ const app = express();
 //middlewares
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://calm-rock-09b49000f.3.azurestaticapps.net",
   })
 );
 //middleware should be executed before the routes
